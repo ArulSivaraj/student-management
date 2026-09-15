@@ -1,8 +1,6 @@
 package com.example.learning.scholar_management.entity;
 
-import java.lang.annotation.Inherited;
-
-import jarkata.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "students")
@@ -51,7 +49,7 @@ public class Student {
         return email;
     }
 
-    public String setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -61,5 +59,13 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+    
+    public void setCourse(String course) {
+        this.course = course;
     }
 }
